@@ -1,14 +1,11 @@
 import com.thoughtworks.selenium.*;
-
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-
 import static org.junit.Assert.*;
-
 import java.util.regex.Pattern;
 
-public class MoverCarroVaga {
+public class LoginAcesso {
 	private Selenium selenium;
 
 	@Before
@@ -18,15 +15,11 @@ public class MoverCarroVaga {
 	}
 
 	@Test
-	public void test1() throws Exception {
-		selenium.open("http://localhost/carro_7/estacionamento.php");
-		Thread.sleep(2000);
-		selenium.highlight("id=c1");
-		Thread.sleep(2000);
-		selenium.highlight("id=v2");
-		Thread.sleep(2000);
-		selenium.dragAndDropToObject("id=c1", "id=v2");
-		
+	public void testLoginAcesso() throws Exception {
+		selenium.open("/carro_7/estacionamento.php");
+		selenium.type("id=login", "giovane");
+		selenium.type("id=senha", "1");
+		selenium.click("id=entrar");
 	}
 
 	@After

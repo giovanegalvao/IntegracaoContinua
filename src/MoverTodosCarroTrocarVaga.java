@@ -10,53 +10,53 @@ public class MoverTodosCarroTrocarVaga {
 
 	@Before
 	public void setUp() throws Exception {
-		selenium = new DefaultSelenium("localhost", 4444, "*chrome", "http://localhost/jquery-ui-1.11.0/development-bundle/demos/droppable/estacionamento_versao_3_IMG.php");
+		selenium = new DefaultSelenium("localhost", 4444, "*chrome", "http://localhost/carro_7/estacionamento.php");
 		selenium.start();
 	}
 
 	@Test
 	public void test6() throws Exception {
-		selenium.open("http://localhost/jquery-ui-1.11.0/development-bundle/demos/droppable/estacionamento_versao_3_IMG.php");
+		selenium.open("http://localhost/carro_7/estacionamento.php");
 		Thread.sleep(2000);
-		selenium.highlight("id=1");
+		selenium.highlight("id=c1");
 		Thread.sleep(2000);
-		selenium.highlight("id=vaga2");
+		selenium.highlight("id=v2");
 		Thread.sleep(2000);
-		selenium.dragAndDropToObject("id=1", "id=vaga2");
+		selenium.dragAndDropToObject("id=c1", "id=v2");
 		Thread.sleep(2000);
-		selenium.highlight("id=2");
+		selenium.highlight("id=c2");
 		Thread.sleep(2000);
-		selenium.highlight("id=vaga1");
+		selenium.highlight("id=c1");
 		Thread.sleep(2000);
-		selenium.dragAndDropToObject("id=2", "id=vaga1");
+		selenium.dragAndDropToObject("id=c2", "id=v1");
 		Thread.sleep(2000);
-		selenium.highlight("id=3");
+		selenium.highlight("id=c3");
 		Thread.sleep(2000);
-		selenium.highlight("id=vaga3");
+		selenium.highlight("id=v3");
 		Thread.sleep(2000);
-		selenium.dragAndDropToObject("id=3", "id=vaga3");
+		selenium.dragAndDropToObject("id=c3", "id=v3");
 		Thread.sleep(2000);
-		selenium.highlight("id=4");
+		selenium.highlight("id=c4");
 		Thread.sleep(2000);
-		selenium.highlight("id=vaga4");
+		selenium.highlight("id=v4");
 		Thread.sleep(2000);
-		selenium.dragAndDropToObject("id=4", "id=vaga4");
+		selenium.dragAndDropToObject("id=c4", "id=v4");
 		Thread.sleep(2000);
-		selenium.highlight("id=5");
+		selenium.highlight("id=c5");
 		Thread.sleep(2000);
-		selenium.highlight("id=vaga5");
+		selenium.highlight("id=v5");
 		Thread.sleep(2000);
-		selenium.dragAndDropToObject("id=5", "id=vaga5");
+		selenium.dragAndDropToObject("id=c5", "id=v5");
 		Thread.sleep(2000);
-		selenium.dragAndDropToObject("id=5", "id=vaga6");
+		selenium.dragAndDropToObject("id=c5", "id=v6");
 		Thread.sleep(2000);
-		selenium.dragAndDropToObject("id=4", "id=vaga5");
+		selenium.dragAndDropToObject("id=c4", "id=v5");
 		Thread.sleep(2000);
-		selenium.dragAndDropToObject("id=3", "id=vaga4");
+		selenium.dragAndDropToObject("id=c3", "id=v4");
 		Thread.sleep(2000);
-		selenium.dragAndDropToObject("id=2", "id=vaga3");
+		selenium.dragAndDropToObject("id=c2", "id=v3");
 		Thread.sleep(2000);
-		selenium.dragAndDropToObject("id=1", "id=vaga2");
+		selenium.dragAndDropToObject("id=c1", "id=v2");
 	}
 
 	@After

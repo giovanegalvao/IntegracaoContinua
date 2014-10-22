@@ -10,23 +10,23 @@ public class MoverVoltarCarro {
 
 	@Before
 	public void setUp() throws Exception {
-		selenium = new DefaultSelenium("localhost", 4444, "*chrome", "http://localhost/jquery-ui-1.11.0/development-bundle/demos/droppable/estacionamento_versao_3_IMG.php");
+		selenium = new DefaultSelenium("localhost", 4444, "*chrome", "http://localhost/carro_7/estacionamento.php");
 		selenium.start();
 	}
 
 	@Test
 	public void test4() throws Exception {
-		selenium.open("http://localhost/jquery-ui-1.11.0/development-bundle/demos/droppable/estacionamento_versao_3_IMG.php");
+		selenium.open("http://localhost/carro_7/estacionamento.php");
 		Thread.sleep(2000);
-		selenium.highlight("id=1");
+		selenium.highlight("id=c1");
 		Thread.sleep(2000);
-		selenium.highlight("id=vaga2");
+		selenium.highlight("id=v2");
 		Thread.sleep(2000);
-		selenium.dragAndDropToObject("id=1", "id=vaga2");
+		selenium.dragAndDropToObject("id=c1", "id=v2");
 		Thread.sleep(2000);
-		selenium.highlight("id=carro1");
+		selenium.highlight("id=c1");
 		Thread.sleep(10000);
-		selenium.dragAndDrop("id=1", "id=carro1");
+		selenium.dragAndDrop("id=c1", "id=c1");
 	}
 
 	@After
